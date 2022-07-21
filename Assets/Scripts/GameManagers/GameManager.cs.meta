@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 881fccda8d971a2409d23f8f086e1365
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerPrefab: {fileID: 8785397883288891184, guid: 465be0cf5f5f9bf47b51af0c3bc2a42f, type: 3}
+  - asteroidPrefab: {instanceID: 0}
+  - UFOPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
