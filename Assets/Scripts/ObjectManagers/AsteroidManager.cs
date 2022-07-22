@@ -15,9 +15,9 @@ public class AsteroidManager : MonoBehaviour
     [SerializeField] private int startAsteroidCount = 2;
     [SerializeField] private int currentAsteroidCount = 0;
     [SerializeField] private bool isEnableAsteroids = true;
+    [SerializeField] private float spawningAngle = 45.0f;
 
     private int asteroidCount = 0;
-    private const float creatingAngle = 45.0f;
 
     private ObjectPooler objcetPool = null;
 
@@ -78,11 +78,11 @@ public class AsteroidManager : MonoBehaviour
             GameObject newAsteroid = new GameObject();
             Vector3 rotation = new Vector3();
 
-            rotation = rotationEuler + Vector3.forward * creatingAngle;
+            rotation = rotationEuler + Vector3.forward * spawningAngle;
             newAsteroid = objcetPool.SpawnObject(asteroid, position, Quaternion.Euler(rotation));
             newAsteroid.GetComponent<Asteroid>().SetSpeed(speed);
 
-            rotation = rotationEuler + Vector3.forward * -creatingAngle;
+            rotation = rotationEuler + Vector3.forward * -spawningAngle;
             newAsteroid = objcetPool.SpawnObject(asteroid, position, Quaternion.Euler(rotation));
             newAsteroid.GetComponent<Asteroid>().SetSpeed(speed);
             AddAsteroid(2);
